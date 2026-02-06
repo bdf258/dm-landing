@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Visual — DearMP</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="hero-visual.css" />
+</head>
+<body>
+
+  <div class="hero-visual" aria-hidden="true">
+    <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="hv-b" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="45"/></filter>
+        <filter id="hv-m" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="18"/></filter>
+        <filter id="hv-g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="6"/></filter>
+        <filter id="hv-d" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="0.5" stdDeviation="1" flood-opacity="0.12"/></filter>
+
+        <!-- Blur-side gradients: opaque left, transparent right -->
+        <linearGradient id="gb-pink" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#FF4866" stop-opacity="0.28"/>
+          <stop offset="0.25" stop-color="#FF4866" stop-opacity="0.18"/>
+          <stop offset="0.5" stop-color="#FF4866" stop-opacity="0.05"/>
+          <stop offset="0.7" stop-color="#FF4866" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="gb-blue" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#4BD5FF" stop-opacity="0.28"/>
+          <stop offset="0.25" stop-color="#4BD5FF" stop-opacity="0.18"/>
+          <stop offset="0.5" stop-color="#4BD5FF" stop-opacity="0.05"/>
+          <stop offset="0.7" stop-color="#4BD5FF" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="gb-yellow" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#FFDD55" stop-opacity="0.28"/>
+          <stop offset="0.25" stop-color="#FFDD55" stop-opacity="0.18"/>
+          <stop offset="0.5" stop-color="#FFDD55" stop-opacity="0.05"/>
+          <stop offset="0.7" stop-color="#FFDD55" stop-opacity="0"/>
+        </linearGradient>
+
+        <!-- Crisp-side gradients: transparent left, opaque right -->
+        <linearGradient id="gc-pink" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0.4" stop-color="#FF4866" stop-opacity="0"/>
+          <stop offset="0.6" stop-color="#FF4866" stop-opacity="0.06"/>
+          <stop offset="0.8" stop-color="#FF4866" stop-opacity="0.15"/>
+          <stop offset="1" stop-color="#FF4866" stop-opacity="0.22"/>
+        </linearGradient>
+        <linearGradient id="gc-blue" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0.4" stop-color="#4BD5FF" stop-opacity="0"/>
+          <stop offset="0.6" stop-color="#4BD5FF" stop-opacity="0.06"/>
+          <stop offset="0.8" stop-color="#4BD5FF" stop-opacity="0.15"/>
+          <stop offset="1" stop-color="#4BD5FF" stop-opacity="0.22"/>
+        </linearGradient>
+        <linearGradient id="gc-yellow" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0.4" stop-color="#FFDD55" stop-opacity="0"/>
+          <stop offset="0.6" stop-color="#FFDD55" stop-opacity="0.06"/>
+          <stop offset="0.8" stop-color="#FFDD55" stop-opacity="0.15"/>
+          <stop offset="1" stop-color="#FFDD55" stop-opacity="0.22"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Fuzzy mixed colour blobs -->
+      <ellipse cx="380" cy="190" rx="150" ry="120" fill="rgba(244,170,184,0.3)" filter="url(#hv-b)"/>
+      <ellipse cx="310" cy="370" rx="140" ry="110" fill="rgba(162,195,244,0.3)" filter="url(#hv-b)"/>
+      <ellipse cx="440" cy="290" rx="120" ry="100" fill="rgba(255,221,85,0.25)" filter="url(#hv-b)"/>
+      <ellipse cx="260" cy="260" rx="100" ry="90" fill="rgba(162,228,199,0.22)" filter="url(#hv-b)"/>
+
+      <!-- Channel lines: blurred layer (fades out toward right) -->
+      <path d="M200,270 C450,260 650,195 850,175 L1400,175" stroke="url(#gb-pink)" stroke-width="30" fill="none" stroke-linecap="round" filter="url(#hv-m)"/>
+      <path d="M200,300 C450,305 650,310 850,310 L1400,310" stroke="url(#gb-blue)" stroke-width="30" fill="none" stroke-linecap="round" filter="url(#hv-m)"/>
+      <path d="M200,330 C450,340 650,410 850,435 L1400,435" stroke="url(#gb-yellow)" stroke-width="30" fill="none" stroke-linecap="round" filter="url(#hv-m)"/>
+
+      <!-- Channel lines: crisp layer (fades in from left) -->
+      <path d="M200,270 C450,260 650,195 850,175 L1400,175" stroke="url(#gc-pink)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M200,300 C450,305 650,310 850,310 L1400,310" stroke="url(#gc-blue)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M200,330 C450,340 650,410 850,435 L1400,435" stroke="url(#gc-yellow)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+      <!-- Dot glows (right-aligned) -->
+      <circle cx="1080" cy="175" r="18" fill="rgba(255,72,102,0.2)" filter="url(#hv-g)"/>
+      <circle cx="1200" cy="175" r="16" fill="rgba(255,72,102,0.16)" filter="url(#hv-g)"/>
+      <circle cx="1320" cy="175" r="18" fill="rgba(255,72,102,0.2)" filter="url(#hv-g)"/>
+      <circle cx="1060" cy="310" r="18" fill="rgba(75,213,255,0.2)" filter="url(#hv-g)"/>
+      <circle cx="1180" cy="310" r="16" fill="rgba(75,213,255,0.16)" filter="url(#hv-g)"/>
+      <circle cx="1300" cy="310" r="18" fill="rgba(75,213,255,0.2)" filter="url(#hv-g)"/>
+      <circle cx="1100" cy="435" r="16" fill="rgba(255,221,85,0.2)" filter="url(#hv-g)"/>
+      <circle cx="1220" cy="435" r="18" fill="rgba(255,221,85,0.2)" filter="url(#hv-g)"/>
+      <circle cx="1340" cy="435" r="16" fill="rgba(255,221,85,0.16)" filter="url(#hv-g)"/>
+
+      <!-- Bright dots (right-aligned, on the channel lines) -->
+      <circle cx="1080" cy="175" r="9" fill="#FF4866" filter="url(#hv-d)"/>
+      <circle cx="1200" cy="175" r="7" fill="#FF4866" opacity="0.75" filter="url(#hv-d)"/>
+      <circle cx="1320" cy="175" r="9" fill="#FF4866" opacity="0.9" filter="url(#hv-d)"/>
+      <circle cx="1060" cy="310" r="8" fill="#4BD5FF" opacity="0.85" filter="url(#hv-d)"/>
+      <circle cx="1180" cy="310" r="9" fill="#4BD5FF" filter="url(#hv-d)"/>
+      <circle cx="1300" cy="310" r="8" fill="#4BD5FF" opacity="0.85" filter="url(#hv-d)"/>
+      <circle cx="1100" cy="435" r="7" fill="#FFDD55" opacity="0.8" filter="url(#hv-d)"/>
+      <circle cx="1220" cy="435" r="9" fill="#FFDD55" filter="url(#hv-d)"/>
+      <circle cx="1340" cy="435" r="8" fill="#FFDD55" opacity="0.8" filter="url(#hv-d)"/>
+    </svg>
+  </div>
+
+</body>
+</html>
