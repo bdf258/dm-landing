@@ -1,0 +1,115 @@
+/* ============================================
+   Hero visual — orbs, channel lines & dots
+   ============================================ */
+
+/* ---- Gradient orb background ---- */
+
+.gradient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+  animation: float 20s ease-in-out infinite;
+}
+
+.orb-pink {
+  width: 600px;
+  height: 600px;
+  background: var(--pink);
+  top: -5%;
+  right: -5%;
+  animation-delay: 0s;
+}
+
+.orb-blue {
+  width: 500px;
+  height: 500px;
+  background: var(--blue);
+  top: 20%;
+  left: -10%;
+  animation-delay: -4s;
+}
+
+.orb-green {
+  width: 450px;
+  height: 450px;
+  background: var(--green);
+  top: 50%;
+  left: 30%;
+  animation-delay: -8s;
+}
+
+.orb-lavender {
+  width: 550px;
+  height: 550px;
+  background: var(--lavender);
+  top: 60%;
+  right: 5%;
+  animation-delay: -12s;
+}
+
+.orb-peach {
+  width: 400px;
+  height: 400px;
+  background: var(--peach);
+  top: 35%;
+  right: 25%;
+  animation-delay: -16s;
+}
+
+.orb-mint {
+  width: 350px;
+  height: 350px;
+  background: var(--mint);
+  bottom: 5%;
+  left: 10%;
+  animation-delay: -6s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%      { transform: translate(30px, -20px) scale(1.05); }
+  50%      { transform: translate(-20px, 15px) scale(0.95); }
+  75%      { transform: translate(15px, 25px) scale(1.02); }
+}
+
+/* ---- Hero SVG visual ---- */
+
+.hero-visual {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-visual svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .hero-visual {
+    display: none;
+  }
+
+  .orb {
+    filter: blur(60px);
+  }
+
+  .orb-pink   { width: 350px; height: 350px; }
+  .orb-blue   { width: 300px; height: 300px; }
+  .orb-green  { width: 280px; height: 280px; }
+  .orb-lavender { width: 320px; height: 320px; }
+  .orb-peach  { width: 250px; height: 250px; }
+  .orb-mint   { width: 200px; height: 200px; }
+}

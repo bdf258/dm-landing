@@ -7,8 +7,9 @@
   <meta name="description" content="DearMP helps staffers respond more fully to constituents by automating the admin." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="hero-visual.css" />
 </head>
 <body>
 
@@ -36,28 +37,125 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="container narrow">
-      <h1 class="hero-title">
-        DearMP helps staffers respond more fully to constituents by automating the admin
-      </h1>
-      <p class="hero-sub">
-        Join constituency MPs who are already using DearMP
-      </p>
-      <a href="#cta" class="btn btn-primary">
-        Request access
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="hv-b" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="45"/></filter>
+          <filter id="hv-m" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="18"/></filter>
+          <filter id="hv-g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="6"/></filter>
+          <filter id="hv-d" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="0.5" stdDeviation="1" flood-opacity="0.12"/></filter>
+
+          <!-- Blur-side gradients: opaque left, transparent right -->
+          <linearGradient id="gb-pink" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#FF4866" stop-opacity="0.28"/>
+            <stop offset="0.25" stop-color="#FF4866" stop-opacity="0.18"/>
+            <stop offset="0.5" stop-color="#FF4866" stop-opacity="0.05"/>
+            <stop offset="0.7" stop-color="#FF4866" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="gb-blue" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#4BD5FF" stop-opacity="0.28"/>
+            <stop offset="0.25" stop-color="#4BD5FF" stop-opacity="0.18"/>
+            <stop offset="0.5" stop-color="#4BD5FF" stop-opacity="0.05"/>
+            <stop offset="0.7" stop-color="#4BD5FF" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="gb-yellow" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#FFDD55" stop-opacity="0.28"/>
+            <stop offset="0.25" stop-color="#FFDD55" stop-opacity="0.18"/>
+            <stop offset="0.5" stop-color="#FFDD55" stop-opacity="0.05"/>
+            <stop offset="0.7" stop-color="#FFDD55" stop-opacity="0"/>
+          </linearGradient>
+
+          <!-- Crisp-side gradients: transparent left, opaque right -->
+          <linearGradient id="gc-pink" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0.4" stop-color="#FF4866" stop-opacity="0"/>
+            <stop offset="0.6" stop-color="#FF4866" stop-opacity="0.06"/>
+            <stop offset="0.8" stop-color="#FF4866" stop-opacity="0.15"/>
+            <stop offset="1" stop-color="#FF4866" stop-opacity="0.22"/>
+          </linearGradient>
+          <linearGradient id="gc-blue" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0.4" stop-color="#4BD5FF" stop-opacity="0"/>
+            <stop offset="0.6" stop-color="#4BD5FF" stop-opacity="0.06"/>
+            <stop offset="0.8" stop-color="#4BD5FF" stop-opacity="0.15"/>
+            <stop offset="1" stop-color="#4BD5FF" stop-opacity="0.22"/>
+          </linearGradient>
+          <linearGradient id="gc-yellow" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0.4" stop-color="#FFDD55" stop-opacity="0"/>
+            <stop offset="0.6" stop-color="#FFDD55" stop-opacity="0.06"/>
+            <stop offset="0.8" stop-color="#FFDD55" stop-opacity="0.15"/>
+            <stop offset="1" stop-color="#FFDD55" stop-opacity="0.22"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Fuzzy mixed colour blobs -->
+        <ellipse cx="380" cy="190" rx="150" ry="120" fill="rgba(244,170,184,0.3)" filter="url(#hv-b)"/>
+        <ellipse cx="310" cy="370" rx="140" ry="110" fill="rgba(162,195,244,0.3)" filter="url(#hv-b)"/>
+        <ellipse cx="440" cy="290" rx="120" ry="100" fill="rgba(255,221,85,0.25)" filter="url(#hv-b)"/>
+        <ellipse cx="260" cy="260" rx="100" ry="90" fill="rgba(162,228,199,0.22)" filter="url(#hv-b)"/>
+
+        <!-- Channel lines: blurred layer (fades out toward right) -->
+        <path d="M200,270 C450,260 650,195 850,175 L1400,175" stroke="url(#gb-pink)" stroke-width="30" fill="none" stroke-linecap="round" filter="url(#hv-m)"/>
+        <path d="M200,300 C450,305 650,310 850,310 L1400,310" stroke="url(#gb-blue)" stroke-width="30" fill="none" stroke-linecap="round" filter="url(#hv-m)"/>
+        <path d="M200,330 C450,340 650,410 850,435 L1400,435" stroke="url(#gb-yellow)" stroke-width="30" fill="none" stroke-linecap="round" filter="url(#hv-m)"/>
+
+        <!-- Channel lines: crisp layer (fades in from left) -->
+        <path d="M200,270 C450,260 650,195 850,175 L1400,175" stroke="url(#gc-pink)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M200,300 C450,305 650,310 850,310 L1400,310" stroke="url(#gc-blue)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M200,330 C450,340 650,410 850,435 L1400,435" stroke="url(#gc-yellow)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+        <!-- Dot glows (right-aligned) -->
+        <circle cx="1080" cy="175" r="18" fill="rgba(255,72,102,0.2)" filter="url(#hv-g)"/>
+        <circle cx="1200" cy="175" r="16" fill="rgba(255,72,102,0.16)" filter="url(#hv-g)"/>
+        <circle cx="1320" cy="175" r="18" fill="rgba(255,72,102,0.2)" filter="url(#hv-g)"/>
+        <circle cx="1060" cy="310" r="18" fill="rgba(75,213,255,0.2)" filter="url(#hv-g)"/>
+        <circle cx="1180" cy="310" r="16" fill="rgba(75,213,255,0.16)" filter="url(#hv-g)"/>
+        <circle cx="1300" cy="310" r="18" fill="rgba(75,213,255,0.2)" filter="url(#hv-g)"/>
+        <circle cx="1100" cy="435" r="16" fill="rgba(255,221,85,0.2)" filter="url(#hv-g)"/>
+        <circle cx="1220" cy="435" r="18" fill="rgba(255,221,85,0.2)" filter="url(#hv-g)"/>
+        <circle cx="1340" cy="435" r="16" fill="rgba(255,221,85,0.16)" filter="url(#hv-g)"/>
+
+        <!-- Bright dots (right-aligned, on the channel lines) -->
+        <circle cx="1080" cy="175" r="9" fill="#FF4866" filter="url(#hv-d)"/>
+        <circle cx="1200" cy="175" r="7" fill="#FF4866" opacity="0.75" filter="url(#hv-d)"/>
+        <circle cx="1320" cy="175" r="9" fill="#FF4866" opacity="0.9" filter="url(#hv-d)"/>
+        <circle cx="1060" cy="310" r="8" fill="#4BD5FF" opacity="0.85" filter="url(#hv-d)"/>
+        <circle cx="1180" cy="310" r="9" fill="#4BD5FF" filter="url(#hv-d)"/>
+        <circle cx="1300" cy="310" r="8" fill="#4BD5FF" opacity="0.85" filter="url(#hv-d)"/>
+        <circle cx="1100" cy="435" r="7" fill="#FFDD55" opacity="0.8" filter="url(#hv-d)"/>
+        <circle cx="1220" cy="435" r="9" fill="#FFDD55" filter="url(#hv-d)"/>
+        <circle cx="1340" cy="435" r="8" fill="#FFDD55" opacity="0.8" filter="url(#hv-d)"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          DearMP helps staffers respond more fully to constituents by automating the admin
+        </h1>
+        <p class="hero-sub">
+          Join constituency MPs who are already using DearMP
+        </p>
+        <a href="#cta" class="btn btn-primary">
+          Request access
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <hr class="divider" />
+  <!-- Banner -->
+  <section class="banner">
+    <div class="container narrow">
+      <p class="banner-text">
+        Fully-featured constituency management, with cases, constituents, tags, and all the other features you expect from your current system. DearMP is faster, easier to use, and integrates AI carefully to speed up workflows while centering caseworkers and staffers.
+      </p>
+    </div>
+  </section>
 
   <!-- Features -->
   <section id="features" class="section">
-    <div class="container">
+    <div class="container section-overlay">
       <p class="section-label">Features</p>
 
-      <!-- Feature 1 -->
+      <!-- Feature 1: AI-assisted email triage -->
       <div class="feature">
         <div class="feature-grid">
           <div>
@@ -100,46 +198,7 @@
 
       <hr class="divider-inner" />
 
-      <!-- Feature 2 -->
-      <div class="feature">
-        <div class="feature-grid">
-          <div>
-            <h2 class="feature-title">Automatic campaign identification</h2>
-            <p class="feature-desc">
-              When constituents write as part of an organised campaign, the system recognises the pattern. Campaign emails are grouped together, allowing your office to respond appropriately without processing each one individually.
-            </p>
-          </div>
-          <div class="feature-icon-large">
-            <div class="icon-circle-lg">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <hr class="divider-inner" />
-
-      <!-- Feature 3 -->
-      <div class="feature">
-        <div class="feature-grid">
-          <div>
-            <p class="coming-soon">Coming soon</p>
-            <h2 class="feature-title">Hansard integration</h2>
-            <p class="feature-desc">
-              Written questions relevant to a case's subject matter will be surfaced automatically. When a constituent writes about housing benefit delays, you'll see what questions have already been asked in Parliament on that topic.
-            </p>
-          </div>
-          <div class="feature-icon-large">
-            <div class="icon-circle-lg">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><circle cx="12" cy="15" r="2"/><path d="M12 12v1"/></svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <hr class="divider-inner" />
-
-      <!-- Feature 4 -->
+      <!-- Feature 2: Permissions (moved up) -->
       <div class="feature">
         <div class="feature-grid">
           <div>
@@ -173,6 +232,117 @@
           </div>
         </div>
       </div>
+
+    </div>
+
+    <div class="container section-overlay section-overlay-second">
+      <!-- Feature 3: Campaign identification (now with Coming soon) -->
+      <div class="feature">
+        <div class="feature-grid">
+          <div>
+            <p class="coming-soon">Coming soon</p>
+            <h2 class="feature-title">Automatic campaign identification</h2>
+            <p class="feature-desc">
+              When constituents write as part of an organised campaign, the system recognises the pattern. Campaign emails are grouped together, allowing your office to respond appropriately without processing each one individually.
+            </p>
+          </div>
+          <!-- Campaign diagram: clustered nodes with identification boundaries -->
+          <div class="diagram" aria-hidden="true">
+            <svg width="320" height="240" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="cg" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur in="SourceGraphic" stdDeviation="20"/></filter>
+                <filter id="cd" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="0.5" stdDeviation="0.5" flood-opacity="0.15"/></filter>
+              </defs>
+              <!-- Blue cluster glow -->
+              <circle cx="85" cy="90" r="55" fill="rgba(75,213,255,0.2)" filter="url(#cg)"/>
+              <!-- Pink cluster glow -->
+              <circle cx="235" cy="148" r="60" fill="rgba(255,72,102,0.18)" filter="url(#cg)"/>
+              <!-- Blue cluster boundary -->
+              <circle cx="85" cy="88" r="54" fill="none" stroke="#4BD5FF" stroke-width="1" stroke-dasharray="4 3" opacity="0.3"/>
+              <!-- Blue connections -->
+              <line x1="58" y1="65" x2="108" y2="60" stroke="#4BD5FF" stroke-width="1.5" opacity="0.2"/>
+              <line x1="108" y1="60" x2="112" y2="100" stroke="#4BD5FF" stroke-width="1.5" opacity="0.2"/>
+              <line x1="58" y1="65" x2="62" y2="112" stroke="#4BD5FF" stroke-width="1.5" opacity="0.2"/>
+              <line x1="62" y1="112" x2="112" y2="100" stroke="#4BD5FF" stroke-width="1.5" opacity="0.2"/>
+              <line x1="58" y1="65" x2="112" y2="100" stroke="#4BD5FF" stroke-width="1" opacity="0.12"/>
+              <line x1="108" y1="60" x2="62" y2="112" stroke="#4BD5FF" stroke-width="1" opacity="0.12"/>
+              <!-- Blue dots -->
+              <circle cx="58" cy="65" r="8" fill="#4BD5FF" filter="url(#cd)"/>
+              <circle cx="108" cy="60" r="8" fill="#4BD5FF" filter="url(#cd)"/>
+              <circle cx="112" cy="100" r="8" fill="#4BD5FF" filter="url(#cd)"/>
+              <circle cx="62" cy="112" r="8" fill="#4BD5FF" filter="url(#cd)"/>
+              <!-- Pink cluster boundary -->
+              <circle cx="237" cy="148" r="58" fill="none" stroke="#FF4866" stroke-width="1" stroke-dasharray="4 3" opacity="0.3"/>
+              <!-- Pink connections -->
+              <line x1="208" y1="118" x2="255" y2="115" stroke="#FF4866" stroke-width="1.5" opacity="0.2"/>
+              <line x1="255" y1="115" x2="268" y2="155" stroke="#FF4866" stroke-width="1.5" opacity="0.2"/>
+              <line x1="208" y1="118" x2="215" y2="170" stroke="#FF4866" stroke-width="1.5" opacity="0.2"/>
+              <line x1="215" y1="170" x2="258" y2="178" stroke="#FF4866" stroke-width="1.5" opacity="0.2"/>
+              <line x1="258" y1="178" x2="268" y2="155" stroke="#FF4866" stroke-width="1.5" opacity="0.2"/>
+              <line x1="255" y1="115" x2="215" y2="170" stroke="#FF4866" stroke-width="1" opacity="0.12"/>
+              <line x1="208" y1="118" x2="268" y2="155" stroke="#FF4866" stroke-width="1" opacity="0.12"/>
+              <!-- Pink dots -->
+              <circle cx="208" cy="118" r="8" fill="#FF4866" filter="url(#cd)"/>
+              <circle cx="255" cy="115" r="8" fill="#FF4866" filter="url(#cd)"/>
+              <circle cx="268" cy="155" r="8" fill="#FF4866" filter="url(#cd)"/>
+              <circle cx="215" cy="170" r="8" fill="#FF4866" filter="url(#cd)"/>
+              <circle cx="258" cy="178" r="8" fill="#FF4866" filter="url(#cd)"/>
+              <!-- Scattered yellow dots (unclustered) -->
+              <circle cx="162" cy="40" r="6" fill="#FFDD55" opacity="0.55" filter="url(#cd)"/>
+              <circle cx="148" cy="195" r="6" fill="#FFDD55" opacity="0.55" filter="url(#cd)"/>
+              <circle cx="170" cy="118" r="6" fill="#FFDD55" opacity="0.55" filter="url(#cd)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider-inner" />
+
+      <!-- Feature 4: Hansard integration (Coming soon) -->
+      <div class="feature">
+        <div class="feature-grid">
+          <div>
+            <p class="coming-soon">Coming soon</p>
+            <h2 class="feature-title">Hansard integration</h2>
+            <p class="feature-desc">
+              Written questions relevant to a case's subject matter will be surfaced automatically. When a constituent writes about housing benefit delays, you'll see what questions have already been asked in Parliament on that topic.
+            </p>
+          </div>
+          <!-- Hansard diagram: stacked documents with highlighted matching lines -->
+          <div class="diagram" aria-hidden="true">
+            <svg width="260" height="210" viewBox="0 0 260 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="hhl1" x1="0" y1="0.5" x2="1" y2="0.5"><stop stop-color="#FFDD55"/><stop offset="1" stop-color="#FF4866"/></linearGradient>
+                <linearGradient id="hhl2" x1="0" y1="0.5" x2="1" y2="0.5"><stop stop-color="#4BD5FF"/><stop offset="1" stop-color="#FFDD55"/></linearGradient>
+                <linearGradient id="hcon" x1="0.5" y1="0" x2="0.5" y2="1"><stop stop-color="#FF4866" stop-opacity="0.35"/><stop offset="1" stop-color="#4BD5FF" stop-opacity="0.35"/></linearGradient>
+              </defs>
+              <!-- Document 1 -->
+              <rect x="10" y="8" width="200" height="54" rx="8" fill="rgba(255,255,255,0.85)" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+              <rect x="24" y="20" width="172" height="3.5" rx="1.75" fill="rgba(0,0,0,0.08)"/>
+              <rect x="24" y="29" width="120" height="3.5" rx="1.75" fill="rgba(0,0,0,0.08)"/>
+              <rect x="24" y="38" width="80" height="3.5" rx="1.75" fill="rgba(0,0,0,0.08)"/>
+              <rect x="112" y="20" width="84" height="3.5" rx="1.75" fill="url(#hhl1)" opacity="0.6"/>
+              <!-- Document 2 -->
+              <rect x="10" y="72" width="200" height="54" rx="8" fill="rgba(255,255,255,0.85)" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+              <rect x="24" y="84" width="120" height="3.5" rx="1.75" fill="rgba(0,0,0,0.08)"/>
+              <rect x="24" y="93" width="172" height="3.5" rx="1.75" fill="rgba(0,0,0,0.08)"/>
+              <rect x="24" y="102" width="80" height="3.5" rx="1.75" fill="rgba(0,0,0,0.08)"/>
+              <rect x="96" y="84" width="68" height="3.5" rx="1.75" fill="url(#hhl2)" opacity="0.5"/>
+              <!-- Document 3 (dimmed — no match) -->
+              <g opacity="0.4">
+                <rect x="10" y="136" width="200" height="54" rx="8" fill="rgba(255,255,255,0.85)" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+                <rect x="24" y="148" width="80" height="3.5" rx="1.75" fill="rgba(0,0,0,0.08)"/>
+                <rect x="24" y="157" width="172" height="3.5" rx="1.75" fill="rgba(0,0,0,0.08)"/>
+                <rect x="24" y="166" width="120" height="3.5" rx="1.75" fill="rgba(0,0,0,0.08)"/>
+              </g>
+              <!-- Connector between matched highlights -->
+              <rect x="222" y="22" width="3" height="66" rx="1.5" fill="url(#hcon)"/>
+              <line x1="212" y1="22" x2="224" y2="22" stroke="#FF4866" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+              <line x1="212" y1="86" x2="224" y2="86" stroke="#4BD5FF" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -180,7 +350,7 @@
 
   <!-- Mission -->
   <section id="mission" class="section">
-    <div class="container narrow">
+    <div class="container narrow section-overlay">
       <p class="section-label">Mission</p>
       <h2 class="mission-title">
         MPs should be able to respond effectively to the people they represent
@@ -203,7 +373,7 @@
 
   <!-- CTA -->
   <section id="cta" class="section cta-section">
-    <div class="container narrow text-center">
+    <div class="container narrow text-center section-overlay">
       <h2 class="cta-title">Interested in DearMP for your office?</h2>
       <p class="cta-sub">
         We're working with a small number of parliamentary offices. If you'd like to learn more, get in touch.
