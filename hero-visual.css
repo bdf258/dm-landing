@@ -84,15 +84,14 @@
 /* ---- Hero SVG visual ---- */
 
 .hero-visual {
-  position: absolute;
-  inset: 0;
+  position: relative;
   pointer-events: none;
   z-index: 0;
 }
 
 .hero-visual svg {
+  display: block;
   width: 100%;
-  height: 100%;
 }
 
 /* ---- Responsive ---- */
