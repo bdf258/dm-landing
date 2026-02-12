@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookies Policy — DearMP</title>
+  <meta name="description" content="DearMP cookies policy. What cookies we use and how to manage them." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>
+
+  <!-- Gradient orbs background -->
+  <div class="gradient-bg" aria-hidden="true">
+    <div class="orb orb-pink"></div>
+    <div class="orb orb-blue"></div>
+    <div class="orb orb-green"></div>
+    <div class="orb orb-lavender"></div>
+    <div class="orb orb-peach"></div>
+    <div class="orb orb-mint"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">DearMP</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="https://app.dearmp.uk" class="btn btn-sm btn-outline">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Policy content -->
+  <section class="policy-page">
+    <div class="container narrow section-overlay">
+      <h1 class="policy-title">Cookies Policy</h1>
+      <p class="policy-updated">Last updated: 12 February 2026</p>
+
+      <div class="policy-content">
+        <h2>1. What are cookies</h2>
+        <p>
+          Cookies are small text files that are stored on your device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners. Similar technologies include localStorage, which stores data in your browser.
+        </p>
+
+        <h2>2. Our use of cookies</h2>
+        <p>
+          The DearMP marketing website (dearmp.uk) uses very few cookies. We do not use any analytics, advertising, or third-party tracking cookies on this site.
+        </p>
+
+        <h2>3. Cookies and storage we use</h2>
+
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Purpose</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>dearmp-cookies</code></td>
+              <td>localStorage</td>
+              <td>Remembers that you have acknowledged the cookie notice so it is not shown again</td>
+              <td>Persistent (until cleared)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          That's it. We do not set any other cookies on the marketing website.
+        </p>
+
+        <h2>4. Third-party services</h2>
+        <p>
+          Our website loads fonts from Google Fonts (fonts.googleapis.com and fonts.gstatic.com). Google's font service does not set cookies when serving font files. Google's privacy policy applies to data collected by their services: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
+        </p>
+
+        <h2>5. The DearMP application</h2>
+        <p>
+          The DearMP application at app.dearmp.uk uses additional cookies necessary for authentication and the functioning of the service. These are strictly necessary cookies and do not require consent. Details are provided when you sign up for the service.
+        </p>
+
+        <h2>6. How to manage cookies</h2>
+        <p>
+          You can control and delete cookies and localStorage data through your browser settings. Most browsers allow you to:
+        </p>
+        <ul>
+          <li>View what cookies and site data are stored</li>
+          <li>Delete individual cookies or all cookies</li>
+          <li>Block cookies from specific or all websites</li>
+          <li>Clear localStorage data for specific sites</li>
+        </ul>
+        <p>
+          Please note that blocking all cookies may affect how some websites function. Since our marketing site only uses localStorage for the cookie notice, blocking it will not affect your experience other than seeing the notice on each visit.
+        </p>
+
+        <h2>7. Changes to this policy</h2>
+        <p>
+          If we introduce new cookies or change how we use them, we will update this policy and the "last updated" date above.
+        </p>
+
+        <h2>8. Contact us</h2>
+        <p>
+          If you have questions about our use of cookies, please contact us at <a href="mailto:ben@dearmp.uk">ben@dearmp.uk</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="logo">DearMP</a>
+        <div class="footer-links">
+          <a href="/privacy">Privacy</a>
+          <a href="/cookies">Cookies</a>
+          <a href="mailto:ben@dearmp.uk">Contact</a>
+        </div>
+        <p class="copyright">&copy; 2026 DearMP</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>This site uses cookies to remember your preferences. See our <a href="/cookies">cookies policy</a>.</p>
+    <button onclick="document.getElementById('cookie-banner').classList.add('cookie-banner-hidden');localStorage.setItem('dearmp-cookies','1')" class="btn btn-sm btn-primary">OK</button>
+  </div>
+  <script>if(localStorage.getItem('dearmp-cookies'))document.getElementById('cookie-banner').classList.add('cookie-banner-hidden')</script>
+
+</body>
+</html>
